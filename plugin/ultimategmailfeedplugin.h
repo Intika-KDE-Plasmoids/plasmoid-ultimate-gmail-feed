@@ -17,24 +17,17 @@
  *  along with Ultimate Gmail Feed. If not, see <http://www.gnu.org/licenses/>.   *
  *********************************************************************************/
 
-import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.plasmoid 2.0
+#ifndef ULTIMATEGMAILFEEDPLUGIN_H
+#define ULTIMATEGMAILFEEDPLUGIN_H
 
-PlasmaCore.IconItem {
-    
-    anchors.fill: parent
-    source: Plasmoid.icon
-    
-    MouseArea {
-        anchors.fill: parent
-        acceptedButtons: Qt.LeftButton | Qt.MiddleButton
-        onClicked: {
-            if (mouse.button == Qt.MiddleButton) {
-                mainItem.action_openInbox()
-            } else {
-                plasmoid.expanded = !plasmoid.expanded
-            }
-        }
-    }
-}
+#include <QQmlExtensionPlugin>
+ 
+class UltimateGmailFeedPlugin : public QQmlExtensionPlugin
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
+public:
+    virtual void registerTypes(const char *uri);
+};
+ 
+#endif // ULTIMATEGMAILFEEDPLUGIN_H

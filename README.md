@@ -36,4 +36,3 @@ Check the released RPM
 
 ![screenshot](https://i.imgur.com/kqD5uxQ.png)
 ![screenshot](http://i.imgur.com/uH3LwNA.png)
-

@@ -1,4 +1,4 @@
-project(gmailfeed)
+project(ultimategmailfeed)
 
 cmake_minimum_required(VERSION 2.8.12)
 
@@ -15,11 +15,11 @@ include(KDECompilerSettings)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Quick)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 
-plasma_install_package(package org.kde.plasma.gmailfeed)
+plasma_install_package(package org.kde.plasma.ultimategmailfeed)
  
 add_subdirectory( plugin )
 add_subdirectory( icons )
 
-install(FILES gmailfeed.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
+install(FILES ultimategmailfeed.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
 
 add_subdirectory( po )

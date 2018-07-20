@@ -1,6 +1,6 @@
 include(ECMInstallIcons)
     
 ecm_install_icons(ICONS
-    hisc-apps-gmailfeed.svgz
+    hisc-apps-ultimategmailfeed.svgz
     THEME hicolor
     DESTINATION ${ICON_INSTALL_DIR} )

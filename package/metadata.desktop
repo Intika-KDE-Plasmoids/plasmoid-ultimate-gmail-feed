@@ -1,20 +1,20 @@
 [Desktop Entry]
-Name=Gmail feed
-Name[fr]=Flux Gmail
-Comment=Gmail Atom feed
-Comment[fr]=Flux Atom Gmail
-Icon=gmailfeed
+Name=Ultimate Gmail Feed
+Name[fr]=Ultimate Flux Gmail
+Comment=Ultimate Gmail Atom Feed
+Comment[fr]=Ultimate Flux Atom Gmail
+Icon=ultimategmailfeed
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-DefaultSize=200,200
 
-X-KDE-PluginInfo-Author=Anthony Vital
-X-KDE-PluginInfo-Email=anthony.vital@gmail.com
-X-KDE-PluginInfo-Website=https://github.com/anthon38/gmailfeed
+X-KDE-PluginInfo-Author=Intika
+X-KDE-PluginInfo-Email=intika.dev@gmail.com
+X-KDE-PluginInfo-Website=https://github.com/intika/gmailfeed
 X-KDE-PluginInfo-Category=Online Services
-X-KDE-PluginInfo-Name=org.kde.plasma.gmailfeed
-X-KDE-PluginInfo-Version=1.1
+X-KDE-PluginInfo-Name=org.kde.plasma.ultimategmailfeed
+X-KDE-PluginInfo-Version=1.5
 
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL

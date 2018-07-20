@@ -9,5 +9,82 @@
       <whatsthis>Polling interval (in minutes).</whatsthis>
       <default>1</default>
     </entry>
+      
+    <entry name="manualCheck" type="Bool">
+      <whatsthis>Check for new mail manually</whatsthis>
+      <default>false</default>
+    </entry>
+      
+    <entry name="multiLine" type="Bool">
+      <whatsthis>Display sender and subject in different line</whatsthis>
+      <default>true</default>
+    </entry>
+      
+    <entry name="multiLineCode" type="string">
+      <whatsthis>Display sender and subject in different line</whatsthis>
+      <default>br/</default>
+    </entry>
+      
+    <entry name="multiLineCodeHeight" type="Int">
+      <whatsthis>Display sender and subject in different line</whatsthis>
+      <default>30</default>
+    </entry>
+      
+    <entry name="openURLInsteadMail" type="Bool">
+      <whatsthis>Open email link on mail click</whatsthis>
+      <default>true</default>
+    </entry>
+      
+    <entry name="openURLInsteadMain" type="Bool">
+      <whatsthis>Open mailbox link on check inbox</whatsthis>
+      <default>true</default>
+    </entry>     
+      
+    <entry name="userName" type="string">
+      <whatsthis>eMail username</whatsthis>
+      <default></default>
+    </entry>    
+      
+    <entry name="realM" type="string">
+      <whatsthis>eMail realm</whatsthis>
+      <default>gmail.com</default>
+    </entry>   
+      
+    <entry name="serverURL" type="string">
+      <whatsthis>RSS Server</whatsthis>
+      <default>mail.google.com/mail/feed/atom</default>
+    </entry>
+      
+    <entry name="serverQuery" type="string">
+      <whatsthis>RSS Server Query</whatsthis>
+      <default>/feed/entry</default>
+    </entry>
+      
+    <entry name="transProt" type="string">
+      <whatsthis>Transfert Protocol</whatsthis>
+      <default>https://</default>
+    </entry>
+      
+    <entry name="commandOpen" type="string">
+      <whatsthis>Command to run on Open inbox</whatsthis>
+      <default>thunderbird</default>
+    </entry>
+      
+    <entry name="commandOpenMail" type="string">
+      <whatsthis>Command to run on Mail click </whatsthis>
+      <default>thunderbird</default>
+    </entry>
+      
+    <entry name="popupHeight" type="Int">
+      <whatsthis>Popup ScrollView Height</whatsthis>
+      <default>656</default>
+    </entry>
+      
+    <entry name="popupWidth" type="Int">
+      <whatsthis>Popup ScrollView Width</whatsthis>
+      <default>356</default>
+    </entry>
+      
   </group>
 </kcfg>
+

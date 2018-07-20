@@ -7,7 +7,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ------")
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
  
-        SET(catalogname plasma_applet_org.kde.plasma.gmailfeed)
+        SET(catalogname plasma_applet_org.kde.plasma.ultimategmailfeed)
  
         ADD_CUSTOM_TARGET(translations ALL)
  
