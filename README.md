@@ -13,6 +13,8 @@ Features :
 - Automatic polling interval
 - Offline Secure Mode (Checking email only manually)
 - Multiline Display
+- Editable Height Popup Scroll View
+- Editable Width Popup Scroll View
 
 Any donations are welcome to : paypal : intika.dev@gmail.com thanks ^^ 
 
@@ -32,5 +34,6 @@ Check the released RPM
     make
     make install
 
-![screenshot](https://i.imgur.com/ll2uQon.png)
+![screenshot](https://i.imgur.com/kqD5uxQ.png)
 ![screenshot](http://i.imgur.com/uH3LwNA.png)
+
