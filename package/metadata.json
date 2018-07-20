@@ -20,7 +20,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "1.5",
+        "Version": "1.6",
         "Website": "https://github.com/intika/ultimategmailfeed"
     },
     "X-Plasma-API": "declarativeappletscript",
