@@ -1,5 +1,5 @@
-Ultimate Gmail Feed
-===================
+Ultimate Gmail Feed v1.6
+========================
 
 Ultimate Gmail Feed is a plasmoid for Plasma 5. It provides a list of your unread emails from your Gmail inbox. You also get notified when you receive new messages.
 
