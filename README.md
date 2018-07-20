@@ -23,3 +23,13 @@ This plasmoid is based on "Gmail Feed" from anthon38, Big thanks to anthon38 for
 ![screenshot](https://i.imgur.com/ll2uQon.png)
 ![screenshot](http://i.imgur.com/uH3LwNA.png)
 
+**Install**
+Check the released RPM
+
+**Build & Install :**
+
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DLIB_INSTALL_DIR=lib -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+    make
+    make install
