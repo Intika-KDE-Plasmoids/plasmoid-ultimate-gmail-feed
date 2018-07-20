@@ -20,10 +20,8 @@ This plasmoid is designed to work with RSS Feeds Mails, you can use it with prov
 
 This plasmoid is based on "Gmail Feed" from anthon38, Big thanks to anthon38 for his work
 
-![screenshot](https://i.imgur.com/ll2uQon.png)
-![screenshot](http://i.imgur.com/uH3LwNA.png)
+**Install :**
 
-**Install**
 Check the released RPM
 
 **Build & Install :**
@@ -33,3 +31,6 @@ Check the released RPM
     cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DLIB_INSTALL_DIR=lib -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
     make
     make install
+
+![screenshot](https://i.imgur.com/ll2uQon.png)
+![screenshot](http://i.imgur.com/uH3LwNA.png)
