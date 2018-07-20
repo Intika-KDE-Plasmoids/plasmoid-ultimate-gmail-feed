@@ -1,4 +1,5 @@
 /**********************************************************************************
+ *  Copyright (c) 2014 Anthony Vital <anthony.vital@gmail.com>                    *
  *  Copyright (c) 2018 intika <intika.dev@gmail.com>                              *
  *                                                                                *
  *  This file is part of Ultimate Gmail Feed.                                     *
