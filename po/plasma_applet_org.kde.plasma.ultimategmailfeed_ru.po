@@ -1,13 +1,16 @@
-# This file is distributed under the same license as the Ultimate Gmail Feed package.
-# Gennadiy Chernyshyk <genaloner@gmail.com>, 2018.
+# Russian localization for Gmail Feed
+# Copyright (C) 2017 Gennadiy Chernyshyk
+# This file is distributed under the same license as the Gmail Feed package.
+#
+# Gena <genaloner@gmail.com>, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Gmail Feed 1.6\n"
+"Project-Id-Version: ultimategmailfeed 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-18 13:44+0100\n"
-"PO-Revision-Date: 2018-07-21 00:15+0200\n"
-"Last-Translator: Gennadiy Chernyshyk <genaloner@gmail.com>\n"
-"Language: ru\n"
+"PO-Revision-Date: 2017-12-08 03:00+0200\n"
+"Last-Translator: Gena <genaloner@gmail.com>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,38 +23,38 @@ msgstr ""
 #: package/contents/ui/FullRepresentation.qml:46
 #: package/contents/ui/main.qml:130
 msgid "Open inbox"
-msgstr "Открыть почтовый ящик"
+msgstr "Открыть входящие"
 
 #: package/contents/ui/main.qml:81 package/contents/ui/main.qml:84
 msgid "1 unread message"
 msgid_plural "%1 unread messages"
-msgstr[0] "1 непрочитанное сообщение"
+msgstr[0] "%1 непрочитанное сообщение"
 msgstr[1] "%1 непрочитанных сообщения"
 msgstr[2] "%1 непрочитанных сообщений"
 
 #: package/contents/ui/main.qml:83 package/contents/ui/main.qml:86
 msgid "No unread messages"
-msgstr "Нет непрочитанных сообщений"
+msgstr "Нет непрочитанныъ сообщений"
 
 #: package/contents/ui/main.qml:90 package/contents/ui/main.qml:93
 msgid "1 new message"
 msgid_plural "%1 new messages"
-msgstr[0] "1 новое сообщение"
+msgstr[0] "%1 новое сообщение"
 msgstr[1] "%1 новых сообщения"
 msgstr[2] "%1 новых сообщений"
 
 #: package/contents/ui/main.qml:97 package/contents/ui/main.qml:99
 msgid "Checking for new messages..."
-msgstr "Проверка новых сообщений..."
+msgstr "Проверяю новые сообщения..."
 
 #: package/contents/ui/main.qml:133 package/contents/ui/main.qml:131
 msgid "Check mail"
-msgstr "Проверить почту"
+msgstr "Спроверить почту"
 
 #: package/contents/ui/configGeneral.qml:35
 #: package/contents/ui/configGeneral.qml:35
 msgid "Polling interval: "
-msgstr "Интервал проверки:"
+msgstr "Интервал запросов:"
 
 #: package/contents/ui/configGeneral.qml:41
 #: package/contents/ui/configGeneral.qml:41
@@ -68,7 +71,7 @@ msgstr "Общее"
 
 #: package/contents/ui/main.qml:70 package/contents/ui/main.qml:117
 msgid "Offline"
-msgstr "Не в сети"
+msgstr "Оффлайн"
 
 #: package/contents/ui/MessageDelegate.qml:33
 msgctxt "Message delegate, author: title"
