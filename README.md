@@ -25,6 +25,7 @@ This plasmoid is based on "Gmail Feed" from anthon38, Big thanks to anthon38 for
 **Install :**
 
 Check the released RPM
+https://www.opendesktop.org/p/1248550
 
 **Build & Install :**
 
