@@ -1,5 +1,7 @@
-Ultimate Gmail Feed v2.1 https://www.opendesktop.org/p/1248550/
+Ultimate Gmail Feed v2.1 
 ========================
+
+https://www.opendesktop.org/p/1248550/
 
 Ultimate Gmail Feed is a plasmoid for Plasma 5. It provides a list of your unread emails from your Gmail inbox. You also get notified when you receive new messages.
 
