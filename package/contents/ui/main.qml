@@ -27,9 +27,15 @@ import org.kde.plasma.private.ultimategmailfeed 0.1
 Item {
     id: mainItem
     
+    // Updater 1/3 ==================================================================================================================================
+    property string updateResponse;
+    property string currentVersion: '2.1';
+    property bool checkUpdateStartup: Plasmoid.configuration.checkUpdateStartup
+    // ==============================================================================================================================================
+    
     property string subtext: ""
     property string title: Plasmoid.title
-    
+        
     Plasmoid.toolTipSubText: subtext
     Plasmoid.icon: xmlModel.count > 0 ? "mail-unread-new" : "mail-unread"
     Plasmoid.compactRepresentation: CompactRepresentation {}
@@ -77,7 +83,8 @@ Item {
         property int newMailId: -1
 
         source: ""
-        query: ""
+        //query: "/"
+        query: "/"
         namespaceDeclarations: "declare default element namespace 'http://purl.org/atom/ns#';"
         
         XmlRole { name: "author"; query: "author/name/string()" }
@@ -107,7 +114,8 @@ Item {
                         if (newMailCount == 1) 
                             message = "<b>"+get(newMailId).author+": "+"</b>"+get(newMailId).title
                         else 
-                            message =  i18np("1 new message", "%1 new messages", newMailCount)
+                            if (newMailCount == 20) {message =  i18np("1 new message", "%1 new messages at least", newMailCount)} 
+                            else {message =  i18np("1 new message", "%1 new messages", newMailCount)}
                         notification.send("new-mail-arrived", mainItem.title, message, "ultimategmailfeed", "ultimategmailfeed")
                         newMailCount = 0
                     }
@@ -128,13 +136,9 @@ Item {
     Timer {
         id: polltimer
         repeat: true
-        triggeredOnStart: true
+        //triggeredOnStart: true
         interval: plasmoid.configuration.pollinterval * 60000
         onTriggered: autoOrNot()
-    }
-    
-    function action_checkMail() {
-        networkStatus.isOnline ? manuelCheck() : mainItem.subtext = i18n("Offline - " + plasmoid.configuration.userName)
     }
     
     function manuelCheck() {
@@ -164,6 +168,67 @@ Item {
         }
     }
     
+    function action_openInboxMail() {
+        executable.exec(plasmoid.configuration.commandOpenMail)
+    }
+    
+    // Updater 2/3 ==================================================================================================================================
+    
+    PlasmaCore.DataSource {
+        id: executableNotification
+        engine: "executable"
+        onNewData: disconnectSource(sourceName) // cmd finished
+        function exec(cmd) {
+            connectSource(cmd)
+        }
+    }
+    
+    Timer {
+        id:timerStartUpdater
+        interval: 300000
+        onTriggered: updaterNotification(false)
+    }
+    
+    function availableUpdate() {
+        var notificationCommand = "notify-send --icon=ultimategmailfeed 'Plasmoid Ultimate Gmail Feed' 'An update is available \n<a href=\"https://www.opendesktop.org/p/1248550/\">Update link</a>' -t 30000";
+        executableNotification.exec(notificationCommand);
+    }
+
+    function noAvailableUpdate() {
+        var notificationCommand = "notify-send --icon=ultimategmailfeed 'Plasmoid Ultimate Gmail Feed' 'Your current version is up to date' -t 30000";
+        executableNotification.exec(notificationCommand);
+    }
+    
+    function updaterNotification(notifyUpdated) {
+        var xhr = new XMLHttpRequest;
+        xhr.responseType = 'text';
+        xhr.open("GET", "https://raw.githubusercontent.com/intika/Ultimate-Gmail-Feed/master/version");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                updateResponse = xhr.responseText;
+                console.log('.'+updateResponse+'.');
+                console.log('.'+currentVersion+'.');
+                //console.log('.'+xhr.status+'.');
+                //console.log('.'+xhr.statusText+'.');
+                if (updateResponse.localeCompare(currentVersion) && updateResponse.localeCompare('') && updateResponse.localeCompare('404: Not Found\n')) {
+                    availableUpdate();
+                } else if (notifyUpdated) {
+                    noAvailableUpdate();
+                }
+            }
+        };
+        xhr.send();
+    }
+    
+    function action_checkUpdate() {
+        updaterNotification(true);
+    }
+    // ==============================================================================================================================================
+    
+    function action_checkMail() {
+        networkStatus.isOnline ? manuelCheck() : mainItem.subtext = i18n("Offline - " + plasmoid.configuration.userName)
+    }
+    
     function action_openInbox() {
     
         if (plasmoid.configuration.openURLInsteadMain) {
@@ -175,15 +240,21 @@ Item {
         
     }
     
-    function action_openInboxMail() {
-        executable.exec(plasmoid.configuration.commandOpenMail)
-    }
-    
     Component.onCompleted: { 
         plasmoid.status = PlasmaCore.Types.PassiveStatus
         plasmoid.setAction("openInbox", i18n("Open inbox"), "folder-mail")
         plasmoid.setAction("checkMail", i18n("Check mail"), "mail-receive")
         plasmoid.setActionSeparator("separator0")
+
+        // Updater 3/3 ==============================================================================================================================
+        plasmoid.setAction("checkUpdate", i18n("Check for updates on github"), "view-grid");
+        plasmoid.setActionSeparator("separator1")
+        if (checkUpdateStartup) {timerStartUpdater.start();}
+        // ==========================================================================================================================================
+        
+        if (plasmoid.configuration.manualCheck == false) {
+            polltimer.start()
+        }
     }
     
 }

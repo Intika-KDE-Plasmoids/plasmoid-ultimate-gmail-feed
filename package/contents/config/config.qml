@@ -26,4 +26,14 @@ ConfigModel {
         icon: "configure"
         source: "configGeneral.qml"
     }
+    ConfigCategory {
+        name: i18n("Advanced")
+        icon: "configure"
+        source: "configAdvanced.qml"
+    }
+	ConfigCategory {
+		 name: i18n("Update")
+		 icon: "update-low"
+		 source: "configUpdater.qml"
+	}
 }

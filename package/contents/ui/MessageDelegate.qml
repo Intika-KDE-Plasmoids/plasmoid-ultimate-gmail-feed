@@ -20,12 +20,18 @@
 
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.plasmoid 2.0
 
 PlasmaComponents.ListItem {
     id: listItem
-
     enabled: true
-   
+    
+    property int lineWidth: Plasmoid.configuration.lineWidth
+    property int lineHeight: Plasmoid.configuration.lineHeight
+    
+    height: lineHeight
+    width: lineWidth
+    
     PlasmaComponents.Label {
         id: label
         anchors.left: parent.left

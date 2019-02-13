@@ -85,6 +85,36 @@
       <default>356</default>
     </entry>
       
+    <entry name="checkUpdateStartup" type="Bool">
+      <label>Notify for update on startup</label>
+      <default>true</default>
+    </entry>
+      
+    <entry name="leftclickCheck" type="Bool">
+      <label>Left click check mail and open list</label>
+      <default>false</default>
+    </entry>
+      
+    <entry name="invertMailList" type="Bool">
+      <label>Invert mail list</label>
+      <default>false</default>
+    </entry>
+      
+    <entry name="middleClickMail" type="Bool">
+      <label>Middle click open inbox</label>
+      <default>true</default>
+    </entry>
+      
+    <entry name="lineHeight" type="Int">
+      <label>Mail line height</label>
+      <default>45</default>
+    </entry>
+      
+    <entry name="lineWidth" type="Int">
+      <label>Mail line width</label>
+      <default>356</default>
+    </entry>
+      
   </group>
 </kcfg>
 

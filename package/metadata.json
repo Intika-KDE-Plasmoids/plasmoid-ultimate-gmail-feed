@@ -15,12 +15,12 @@
         "Icon": "ultimategmailfeed",
         "Id": "org.kde.plasma.ultimategmailfeed",
         "License": "GPL",
-        "Name": "Ultimate Gmail feed",
+        "Name": "Ultimate Gmail Feed",
         "Name[fr]": "Ultimate Flux Gmail",
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "1.6",
+        "Version": "2.1",
         "Website": "https://github.com/intika/ultimategmailfeed"
     },
     "X-Plasma-API": "declarativeappletscript",

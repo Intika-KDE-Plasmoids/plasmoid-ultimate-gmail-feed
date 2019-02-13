@@ -24,6 +24,9 @@ import org.kde.plasma.plasmoid 2.0
 
 PlasmaCore.IconItem {
     
+    property bool leftclickCheck: Plasmoid.configuration.leftclickCheck
+    property bool middleClickMail: Plasmoid.configuration.middleClickMail
+    
     anchors.fill: parent
     source: Plasmoid.icon
     
@@ -32,8 +35,9 @@ PlasmaCore.IconItem {
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton
         onClicked: {
             if (mouse.button == Qt.MiddleButton) {
-                mainItem.action_openInbox()
+                if (middleClickMail) {mainItem.action_openInbox()}
             } else {
+                if (leftclickCheck) {mainItem.action_checkMail()}
                 plasmoid.expanded = !plasmoid.expanded
             }
         }

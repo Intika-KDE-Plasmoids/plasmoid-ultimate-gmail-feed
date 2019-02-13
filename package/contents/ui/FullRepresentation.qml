@@ -22,8 +22,11 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.plasmoid 2.0
 
 Item {
+    
+    property bool invertMailList: Plasmoid.configuration.invertMailList
     
     Layout.minimumWidth: plasmoid.configuration.popupWidth
     Layout.minimumHeight: plasmoid.configuration.popupHeight
@@ -60,10 +63,13 @@ Item {
         anchors.top: heading.height > inboxIcon.height ? heading.bottom : inboxIcon.bottom
         anchors.bottom: parent.bottom
         anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.right: parent.right        
         
         ListView {
             id: inboxView;
+            
+            //invert feature
+            verticalLayoutDirection: (invertMailList == true) ? ListView.BottomToTop : ListView.TopToBottom
             
             anchors.rightMargin: units.gridUnit
             clip: true

@@ -44,8 +44,6 @@ Item {
     property alias cfg_transProt: transProt.text
     property alias cfg_commandOpen: commandOpen.text
     property alias cfg_commandOpenMail: commandOpenMail.text
-    property alias cfg_popupHeight: popupHeight.value
-    property alias cfg_popupWidth: popupWidth.value
     
     QtLayouts.ColumnLayout {
         anchors.left: parent.left
@@ -147,38 +145,6 @@ Item {
                                 id: commandOpenMail
                                 Layout.fillWidth: true
                                 text: i18n(cfg_commandOpenMail)
-                            }
-                            
-                        }
-                        
-                        QtLayouts.RowLayout {
-                        
-                            PlasmaComponents.Label {
-                                text: i18n("Popup height (work outside system tray) : ")
-                            }
-
-                            SpinBox {
-                                id: popupHeight
-                                suffix: i18ncp("Popup height in px", "px", "px", value)
-                                Layout.fillWidth: true
-                                minimumValue: 1
-                                maximumValue: 9999
-                            }
-                            
-                        }
-                        
-                        QtLayouts.RowLayout {
-                        
-                            PlasmaComponents.Label {
-                                text: i18n("Popup width (work outside system tray) : ")
-                            }
-
-                            SpinBox {
-                                id: popupWidth
-                                suffix: i18ncp("Popup width in px", "px", "px", value)
-                                Layout.fillWidth: true
-                                minimumValue: 1
-                                maximumValue: 9999
                             }
                             
                         }
