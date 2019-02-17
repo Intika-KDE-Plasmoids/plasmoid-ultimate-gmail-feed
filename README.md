@@ -19,7 +19,7 @@ Features:
 - Editable Width Popup Scroll View
 - And much more...
 
-Any donations are welcome to : paypal : intika.dev@gmail.com thanks ^^ 
+Any donations are welcome to : paypal : intika@librefox.org thanks ^^ 
 
 This plasmoid is designed to work with RSS Feeds Mails, you can use it with providers other than gmail by changing the configuration
 
