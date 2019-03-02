@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ultimategmailfeed package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ultimategmailfeed 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-18 13:44+0100\n"
+"POT-Creation-Date: 2019-03-02 23:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,15 @@ msgstr ""
 #: package/contents/ui/FullRepresentation.qml:44
 #: package/contents/ui/main.qml:132
 #: package/contents/ui/FullRepresentation.qml:46
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:130 package/contents/ui/main.qml:245
+#: package/contents/ui/FullRepresentation.qml:56
+#: package/contents/ui/main.qml:245
+#: package/contents/ui/FullRepresentation.qml:56
 msgid "Open inbox"
 msgstr ""
 
 #: package/contents/ui/main.qml:81 package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:108 package/contents/ui/main.qml:108
 msgid "1 unread message"
 msgid_plural "%1 unread messages"
 msgstr[0] ""
@@ -36,33 +40,38 @@ msgid "No unread messages"
 msgstr ""
 
 #: package/contents/ui/main.qml:90 package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:117 package/contents/ui/main.qml:118
 msgid "1 new message"
 msgid_plural "%1 new messages"
 msgstr[0] ""
 msgstr[1] ""
 
 #: package/contents/ui/main.qml:97 package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:124 package/contents/ui/main.qml:124
 msgid "Checking for new messages..."
 msgstr ""
 
 #: package/contents/ui/main.qml:133 package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:246 package/contents/ui/main.qml:246
 msgid "Check mail"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:35
 #: package/contents/ui/configGeneral.qml:35
 msgid "Polling interval: "
 msgstr ""
 
 #: package/contents/ui/configGeneral.qml:41
-#: package/contents/ui/configGeneral.qml:41
+#: package/contents/ui/configGeneral.qml:160
+#: package/contents/ui/configGeneral.qml:160
 msgctxt "Polling interval in minutes"
 msgid "min"
 msgid_plural "min"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/config/config.qml:24 package/contents/config/config.qml:24
+#: package/contents/config/config.qml:24 package/contents/config/config.qml:25
+#: package/contents/config/config.qml:25
 msgid "General"
 msgstr ""
 
@@ -73,4 +82,182 @@ msgstr ""
 #: package/contents/ui/MessageDelegate.qml:33
 msgctxt "Message delegate, author: title"
 msgid "<b>%1: </b>%2"
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:55
+#: package/contents/ui/configAdvanced.qml:55
+msgid "Invert mail list order"
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:60
+#: package/contents/ui/configAdvanced.qml:60
+msgid "Check mailbox on left click"
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:65
+#: package/contents/ui/configAdvanced.qml:65
+msgid "Middle click open inbox application/link"
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:71
+#: package/contents/ui/configAdvanced.qml:71
+msgid "Popup height (work outside system tray) : "
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:76
+#: package/contents/ui/configAdvanced.qml:76
+msgctxt "Popup height in px"
+msgid "px"
+msgid_plural "px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/configAdvanced.qml:87
+#: package/contents/ui/configAdvanced.qml:87
+msgid "Popup width (work outside system tray) : "
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:92
+#: package/contents/ui/configAdvanced.qml:92
+msgctxt "Popup width in px"
+msgid "px"
+msgid_plural "px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/configAdvanced.qml:103
+#: package/contents/ui/configAdvanced.qml:103
+msgid "Mail line height : "
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:108
+#: package/contents/ui/configAdvanced.qml:108
+msgctxt "Line height in px"
+msgid "px"
+msgid_plural "px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/configAdvanced.qml:119
+#: package/contents/ui/configAdvanced.qml:119
+msgid "Mail line width : "
+msgstr ""
+
+#: package/contents/ui/configAdvanced.qml:124
+#: package/contents/ui/configAdvanced.qml:124
+msgctxt "Line width in px"
+msgid "px"
+msgid_plural "px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/MessageDelegate.qml:42
+#: package/contents/ui/MessageDelegate.qml:42
+msgctxt "Message delegate, author: title"
+msgid "<b>%1 : </b><"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:61
+#: package/contents/ui/configGeneral.qml:61
+msgid "Email account : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:71
+#: package/contents/ui/configGeneral.qml:71
+msgid "@"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:85
+#: package/contents/ui/configGeneral.qml:85
+msgid "Transfer Protocol : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:99
+#: package/contents/ui/configGeneral.qml:99
+msgid "RSS Server : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:113
+#: package/contents/ui/configGeneral.qml:113
+msgid "Server Query : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:127
+#: package/contents/ui/configGeneral.qml:127
+msgid "Command to run on 'Open inbox' : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:141
+#: package/contents/ui/configGeneral.qml:141
+msgid "Command to run on 'eMail click' : "
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:155
+#: package/contents/ui/configGeneral.qml:155
+msgid "Polling interval :"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:170
+#: package/contents/ui/configGeneral.qml:170
+msgid "Check mailbox manually only (ignore polling interval)"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:175
+#: package/contents/ui/configGeneral.qml:175
+msgid "Display message subject in a new line"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:180
+#: package/contents/ui/configGeneral.qml:180
+msgid "Open email link instead of a command on 'eMail click'"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:185
+#: package/contents/ui/configGeneral.qml:185
+msgid "Open email link instead of a command on 'Open inbox'"
+msgstr ""
+
+#: package/contents/ui/main.qml:110 package/contents/ui/main.qml:110
+msgid "No unread messages - "
+msgstr ""
+
+#: package/contents/ui/main.qml:167 package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:167 package/contents/ui/main.qml:229
+msgid "Offline - "
+msgstr ""
+
+#: package/contents/ui/main.qml:250 package/contents/ui/main.qml:250
+msgid "Check for updates on github"
+msgstr ""
+
+#: package/contents/ui/configUpdater.qml:30
+#: package/contents/ui/configUpdater.qml:30
+msgid "Updater"
+msgstr ""
+
+#: package/contents/ui/configUpdater.qml:37
+#: package/contents/ui/configUpdater.qml:37
+msgid "Version: 2.1"
+msgstr ""
+
+#: package/contents/ui/configUpdater.qml:40
+#: package/contents/ui/configUpdater.qml:40
+msgid "Author: Intika"
+msgstr ""
+
+#: package/contents/ui/configUpdater.qml:48
+#: package/contents/ui/configUpdater.qml:48
+msgid "Notify for update on startup (checked once on github, 5 min after startup)"
+msgstr ""
+
+#: package/contents/config/config.qml:30 package/contents/config/config.qml:30
+msgid "Advanced"
+msgstr ""
+
+#: package/contents/config/config.qml:35 package/contents/config/config.qml:35
+msgid "Update"
+msgstr ""
+
+#: package/contents/ui/configUpdater.qml:34
+msgid "Plasmoid: Ultimate Gmail Feed"
 msgstr ""

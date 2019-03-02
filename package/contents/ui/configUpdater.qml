@@ -27,11 +27,11 @@ Item {
             flat: true
             ColumnLayout {
                 Label {
-                    text: i18n("\nUpdater")
+                    text: "\n"+i18n("Updater")
                     font.weight: Font.Bold
                 }
                 Label {
-                    text: i18n("Plasmoid: Ultimate Gmail Feed\n")
+                    text: i18n("Plasmoid: Ultimate Gmail Feed")+"\n"
                 }
                 Label {
                     text: i18n("Version: 2.1")
