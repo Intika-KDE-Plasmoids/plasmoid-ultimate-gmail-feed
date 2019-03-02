@@ -1,23 +1,21 @@
-# Russian localization for Ultimate Gmail Feed
-# Copyright (C) 2017 Gennadiy Chernyshyk
-# This file is distributed under the same license as the Ultimate Gmail Feed package.
+# ultimategmailfeed hungarian translations.
+# Copyright (C) 2014 Anthony Vital
+# This file is distributed under the same license as the Gmail Feed package.
+# Anthony Vital <anthony.vital@gmail.com>, 2014
 #
-# Gena <genaloner@gmail.com>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: ultimategmailfeed 2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-02 23:22+0100\n"
-"PO-Revision-Date: 2018-07-23 05:23+0200\n"
-"Last-Translator: Gennadiy Chernyshyk <genaloner@gmail.com>\n"
-"Language-Team: Russian <>\n"
-"Language: ru_RU\n"
+"PO-Revision-Date: 2019-03-02 11:12+0300\n"
+"Last-Translator: Csaba Kertesz <csaba.kertesz@gmail.com>\n"
+"Language-Team: Hungarian <csaba.kertesz@gmail.com>\n"
+"Language: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: package/contents/ui/FullRepresentation.qml:44
 #: package/contents/ui/main.qml:132
@@ -25,219 +23,209 @@ msgstr ""
 #: package/contents/ui/main.qml:130 package/contents/ui/main.qml:245
 #: package/contents/ui/FullRepresentation.qml:56
 msgid "Open inbox"
-msgstr "Открыть входящие"
+msgstr "Bejövő üzenetek megnyitása"
 
 #: package/contents/ui/main.qml:81 package/contents/ui/main.qml:84
 #: package/contents/ui/main.qml:108
 msgid "1 unread message"
 msgid_plural "%1 unread messages"
-msgstr[0] "1 непрочитанное сообщение"
-msgstr[1] "%1 непрочитанных сообщения"
-msgstr[2] "%1 непрочитанных сообщений"
+msgstr[0] "1 olvasatlan üzenet"
+msgstr[1] "%1 olvasatlan üzenet"
 
 #: package/contents/ui/main.qml:83 package/contents/ui/main.qml:86
 msgid "No unread messages"
-msgstr "Нет непрочитанных сообщений"
+msgstr "Nincs olvasatlan üzenet"
 
 #: package/contents/ui/main.qml:90 package/contents/ui/main.qml:93
 #: package/contents/ui/main.qml:117 package/contents/ui/main.qml:118
 msgid "1 new message"
 msgid_plural "%1 new messages"
-msgstr[0] "1 новое сообщение"
-msgstr[1] "%1 новых сообщения"
-msgstr[2] "%1 новых сообщений"
+msgstr[0] "1 új üzenet"
+msgstr[1] "%1 új üzenet"
 
 #: package/contents/ui/main.qml:97 package/contents/ui/main.qml:99
 #: package/contents/ui/main.qml:124
 msgid "Checking for new messages..."
-msgstr "Проверка новых сообщений..."
+msgstr "Új üzenetek keresése..."
 
 #: package/contents/ui/main.qml:133 package/contents/ui/main.qml:131
 #: package/contents/ui/main.qml:246
 msgid "Check mail"
-msgstr "Проверить почту"
-
-#: package/contents/ui/configGeneral.qml:35
-msgid "Polling interval: "
-msgstr "Интервал запросов:"
+msgstr "Üzenetek frissítése"
 
 #: package/contents/ui/configGeneral.qml:41
 #: package/contents/ui/configGeneral.qml:160
 msgctxt "Polling interval in minutes"
 msgid "min"
 msgid_plural "min"
-msgstr[0] " минута"
-msgstr[1] " минуты"
-msgstr[2] " минут"
+msgstr[0] " perc"
+msgstr[1] " perc"
 
 #: package/contents/config/config.qml:24 package/contents/config/config.qml:25
 msgid "General"
-msgstr "Общее"
+msgstr "Általános"
 
 #: package/contents/ui/main.qml:70 package/contents/ui/main.qml:117
 msgid "Offline"
-msgstr "Не в сети"
+msgstr "Nincs internetkapcsolat"
 
 #: package/contents/ui/MessageDelegate.qml:33
 msgctxt "Message delegate, author: title"
 msgid "<b>%1: </b>%2"
-msgstr ""
+msgstr "<b>%1 : </b>%2"
 
 #: package/contents/ui/configAdvanced.qml:55
 msgid "Invert mail list order"
-msgstr ""
+msgstr "Az üzenetlista megfordítása"
 
 #: package/contents/ui/configAdvanced.qml:60
 msgid "Check mailbox on left click"
-msgstr ""
+msgstr "Üzenetek frissítése a balgombbal kattintva"
 
 #: package/contents/ui/configAdvanced.qml:65
 msgid "Middle click open inbox application/link"
-msgstr ""
+msgstr "Az email program/link megnyitása a középső gombbal kattintva"
 
 #: package/contents/ui/configAdvanced.qml:71
 msgid "Popup height (work outside system tray) : "
-msgstr ""
+msgstr "Felugró ablak magassága : "
 
 #: package/contents/ui/configAdvanced.qml:76
 msgctxt "Popup height in px"
 msgid "px"
 msgid_plural "px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " képpont"
+msgstr[1] " képpont"
 
 #: package/contents/ui/configAdvanced.qml:87
 msgid "Popup width (work outside system tray) : "
-msgstr ""
+msgstr "Felugró ablak szélessége : "
 
 #: package/contents/ui/configAdvanced.qml:92
 msgctxt "Popup width in px"
 msgid "px"
 msgid_plural "px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " képpont"
+msgstr[1] " képpont"
 
 #: package/contents/ui/configAdvanced.qml:103
 msgid "Mail line height : "
-msgstr ""
+msgstr "Egy üzenet megjelenítésének magassága : "
 
 #: package/contents/ui/configAdvanced.qml:108
 msgctxt "Line height in px"
 msgid "px"
 msgid_plural "px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " képpont"
+msgstr[1] " képpont"
 
 #: package/contents/ui/configAdvanced.qml:119
 msgid "Mail line width : "
-msgstr ""
+msgstr "Egy üzenet megjelenítésének szélessége : "
 
 #: package/contents/ui/configAdvanced.qml:124
 msgctxt "Line width in px"
 msgid "px"
 msgid_plural "px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " képpont"
+msgstr[1] " képpont"
 
 #: package/contents/ui/MessageDelegate.qml:42
+#, fuzzy
+#| msgctxt "Message delegate, author: title"
+#| msgid "<b>%1: </b>%2"
 msgctxt "Message delegate, author: title"
 msgid "<b>%1 : </b><"
-msgstr ""
+msgstr "<b>%1 : </b>%2"
 
 #: package/contents/ui/configGeneral.qml:61
 msgid "Email account : "
-msgstr ""
+msgstr "Email fiók : "
 
 #: package/contents/ui/configGeneral.qml:71
 msgid "@"
-msgstr ""
+msgstr "@"
 
 #: package/contents/ui/configGeneral.qml:85
 msgid "Transfer Protocol : "
-msgstr ""
+msgstr "Átviteli protokoll : "
 
 #: package/contents/ui/configGeneral.qml:99
 msgid "RSS Server : "
-msgstr ""
+msgstr "RSS szerver : "
 
 #: package/contents/ui/configGeneral.qml:113
 msgid "Server Query : "
-msgstr ""
+msgstr "Szerver lekérdezése :"
 
 #: package/contents/ui/configGeneral.qml:127
 msgid "Command to run on 'Open inbox' : "
-msgstr ""
+msgstr "Parancs futtatása a Bejövő üzenetek megnyitásra kattintva"
 
 #: package/contents/ui/configGeneral.qml:141
 msgid "Command to run on 'eMail click' : "
-msgstr ""
+msgstr "Parancs futtatása egy emailre kattintva"
 
 #: package/contents/ui/configGeneral.qml:155
-#, fuzzy
-#| msgid "Polling interval: "
 msgid "Polling interval :"
-msgstr "Интервал запросов:"
+msgstr "Frissítési periódus :"
 
 #: package/contents/ui/configGeneral.qml:170
 msgid "Check mailbox manually only (ignore polling interval)"
-msgstr ""
+msgstr "Az üzenetek manuális frissítése (automatikus periódusok helyett)"
 
 #: package/contents/ui/configGeneral.qml:175
 msgid "Display message subject in a new line"
-msgstr ""
+msgstr "Az üzenet tárgyának megjelenítése új sorban"
 
 #: package/contents/ui/configGeneral.qml:180
 msgid "Open email link instead of a command on 'eMail click'"
-msgstr ""
+msgstr "Email link megnyitása parancs helyett emailre kattintva"
 
 #: package/contents/ui/configGeneral.qml:185
 msgid "Open email link instead of a command on 'Open inbox'"
-msgstr ""
+msgstr "Email link megnyitása parancs helyett a Bejövő üzenetek megnyitásra kattintva"
 
 #: package/contents/ui/main.qml:110
 #, fuzzy
 #| msgid "No unread messages"
 msgid "No unread messages - "
-msgstr "Нет непрочитанных сообщений"
+msgstr "Nincs olvasatlan üzenet"
 
 #: package/contents/ui/main.qml:167 package/contents/ui/main.qml:229
 #, fuzzy
 #| msgid "Offline"
 msgid "Offline - "
-msgstr "Не в сети"
+msgstr "Nincs internetkapcsolat"
 
 #: package/contents/ui/main.qml:250
 msgid "Check for updates on github"
-msgstr ""
+msgstr "Frissítés keresése github-on"
 
 #: package/contents/ui/configUpdater.qml:30
 msgid "Updater"
-msgstr ""
+msgstr "Frissítés"
 
 #: package/contents/ui/configUpdater.qml:37
 msgid "Version: 2.1"
-msgstr ""
+msgstr "Verzió: 2.1"
 
 #: package/contents/ui/configUpdater.qml:40
 msgid "Author: Intika"
-msgstr ""
+msgstr "Szerző: Intika"
 
 #: package/contents/ui/configUpdater.qml:48
 msgid "Notify for update on startup (checked once on github, 5 min after startup)"
-msgstr ""
+msgstr "Értesíts újabb verzióról indítás után (egyszer, 5 perccel később)"
 
 #: package/contents/config/config.qml:30
 msgid "Advanced"
-msgstr ""
+msgstr "Haladó"
 
 #: package/contents/config/config.qml:35
 msgid "Update"
-msgstr ""
+msgstr "Frissítés"
 
 #: package/contents/ui/configUpdater.qml:34
 msgid "Plasmoid: Ultimate Gmail Feed"
-msgstr ""
+msgstr "Plasmoid: Ultimate Gmail Feed"
