@@ -37,7 +37,7 @@ Item {
     property string title: Plasmoid.title
         
     Plasmoid.toolTipSubText: subtext
-    Plasmoid.icon: xmlModel.count > 0 ? "mail-unread-new" : "mail-unread"
+    Plasmoid.icon: xmlModel2.count > 0 ? "mail-unread-new" : "mail-unread"
     Plasmoid.compactRepresentation: CompactRepresentation {}
     Plasmoid.fullRepresentation: FullRepresentation {}
     Plasmoid.switchWidth: units.gridUnit * 8
@@ -76,9 +76,10 @@ Item {
         id: notification
     }
     
+
     XmlListModel {
-        id: xmlModel
-        
+        id: xmlModel2
+
         property int newMailCount: 0
         property int newMailId: -1
 
@@ -86,17 +87,27 @@ Item {
         //query: "/"
         query: "/"
         namespaceDeclarations: "declare default element namespace 'http://purl.org/atom/ns#';"
-        
-        XmlRole { name: "author"; query: "author/name/string()" }
-        XmlRole { name: "title"; query: "title/string()" }
-        XmlRole { name: "link"; query: "link/@href/string()" }
+
         XmlRole { name: "id"; query: "id/string()"; isKey: true }
-        
+
         onRowsInserted: {
             newMailCount += last-first+1
             newMailId = first
         }
-        
+
+    }
+
+    XmlListModel {
+        id: xmlModel
+
+        source: ""
+        query: "/"
+        namespaceDeclarations: "declare default element namespace 'http://purl.org/atom/ns#';"
+
+        XmlRole { name: "author"; query: "author/name/string()" }
+        XmlRole { name: "title"; query: "title/string()" }
+        XmlRole { name: "link"; query: "link/@href/string()" }
+
         onStatusChanged: {
             switch (status) {
                 case XmlListModel.Null:
@@ -109,15 +120,15 @@ Item {
                     } else {
                         mainItem.subtext = i18n("No unread messages - " + plasmoid.configuration.userName)
                     }
-                    if (newMailCount > 0) {
+                    if (xmlModel2.newMailCount > 0) {
                         var message
-                        if (newMailCount == 1) 
-                            message = "<b>"+get(newMailId).author+": "+"</b>"+get(newMailId).title
+                        if (xmlModel2.newMailCount == 1) 
+                            message = "<b>"+get(xmlModel2.newMailId).author+": "+"</b>"+get(xmlModel2.newMailId).title
                         else 
-                            if (newMailCount == 20) {message =  i18np("1 new message", "%1 new messages at least", newMailCount)} 
-                            else {message =  i18np("1 new message", "%1 new messages", newMailCount)}
+                            if (xmlModel2.newMailCount == 20) {message =  i18np("1 new message", "%1 new messages at least", xmlModel2.newMailCount)} 
+                            else {message =  i18np("1 new message", "%1 new messages", xmlModel2.newMailCount)}
                         notification.send("new-mail-arrived", mainItem.title, message, "ultimategmailfeed", "ultimategmailfeed")
-                        newMailCount = 0
+                        xmlModel2.newMailCount = 0
                     }
                     break
                 case XmlListModel.Loading:
@@ -152,14 +163,15 @@ Item {
             plasmoid.configuration.multiLineCodeHeight = 10
         }
     
-        xmlModel.source = plasmoid.configuration.transProt 
+        xmlModel2.source = xmlModel.source = plasmoid.configuration.transProt 
                           + plasmoid.configuration.userName 
                           + "%40" 
                           + plasmoid.configuration.realM 
                           + "@"
                           + plasmoid.configuration.serverURL
-        xmlModel.query = plasmoid.configuration.serverQuery
+        xmlModel2.query = xmlModel.query = plasmoid.configuration.serverQuery
         xmlModel.reload()
+        xmlModel2.reload()
     }
     
     function autoOrNot() {
